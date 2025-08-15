@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <h2>로그인</h2>
+  <form id="loginForm">
+    <input type="text" id="username" name="username" placeholder="아이디" required>
+    <input type="password" id="password" name="password" placeholder="비밀번호" required>
+    <button type="submit">로그인</button>
+  </form>
+
+  <div class="center small-gap">
+    <a href="#" onclick="alert('아이디 찾기는 추후 제공됩니다.');return false;">아이디 찾기</a>
+    <span>|</span>
+    <a href="#" onclick="alert('비밀번호 찾기는 추후 제공됩니다.');return false;">비밀번호 찾기</a>
+    <span>|</span>
+    <a href="#" onclick="alert('회원가입은 추후 제공됩니다.');return false;">회원가입</a>
+  </div>
+
+  <script src="/js/logout.js"></script>
+  <script src="/js/login.js"></script>
+  <script>
+    // navbar 로드
+    fetch("/navbar.html").then(r=>r.text()).then(h => document.getElementById("navbar").innerHTML = h);
+  </script>
+</body>
+</html>

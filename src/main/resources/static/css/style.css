@@ -1,0 +1,162 @@
+/* 기존 코드 유지 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: royalblue;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: dodgerblue;
+}
+
+/* 🔽 여기에 추가 스타일 삽입 */
+
+.post-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+.post-card h3 {
+  margin-top: 0;
+  color: #444;
+}
+.post-card p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a, nav button {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  border: none;
+  background: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav button:hover {
+  color: royalblue;
+}
+
+.alert {
+  background-color: #ffe0e0;
+  color: #a33;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  input, textarea, button {
+    font-size: 16px;
+  }
+
+  nav a, nav button {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+/* 레이아웃 */
+.tm-header { margin-bottom: 10px; }
+.brand { font-size: 36px; margin: 10px 0 20px; text-align: center; }
+
+.tm-main { display: flex; justify-content: center; }
+.tm-hero { display: grid; grid-template-columns: 1.6fr 1fr; gap: 20px; width: 1100px; }
+
+.hero-left { display: grid; gap: 20px; }
+.hero-right { display: block; }
+
+.search-card, .map-card, .login-card {
+  background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.08);
+}
+
+.search-form { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.search-form input { margin: 0; }
+.search-form button { margin: 0; }
+
+/* 탭 */
+.tabs { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.tab-btn { padding: 8px 14px; border-radius: 999px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+.tab-btn.active { background: royalblue; color: #fff; border-color: royalblue; }
+
+.tab-pane { display: none; margin-top: 12px; }
+.tab-pane.active { display: block; }
+
+.ghost { background: transparent; border: 1px solid #888; color: #333; }
+.wide { width: 100%; }
+
+.map img { width: 100%; border-radius: 8px; user-select: none; }
+
+/* 네비게이션 */
+.navbar {
+  background:#fff; padding: 10px 16px; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+.navbar a, .navbar button { text-decoration:none; color:#333; background:none; border:none; cursor:pointer; padding:6px 10px; }
+.navbar a:hover, .navbar button:hover { color:royalblue; }
+.brand-sm { font-weight: 800; }
+.grow { flex: 1; }
+
+/* 섹션 공통 */
+.page-header { display:flex; align-items:center; justify-content:space-between; width:1100px; margin: 0 auto 10px; }
+
+/* 유틸 */
+.center { display:flex; justify-content:center; align-items:center; }
+.small-gap { gap: 10px; }
+.muted { color:#888; font-size: 12px; text-align:center; margin-top: 8px; }
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .tm-hero { grid-template-columns: 1fr; width: 100%; }
+  .page-header { width: 100%; padding: 0 12px; }
+}
